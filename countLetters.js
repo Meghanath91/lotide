@@ -16,13 +16,10 @@ const countLetters = function(str) {
     } else {
       result[char] = 1;
     }
-    
   }
-  
-  // console.log(result);
   return result;
 };
-const finalResult = countLetters("l o l");
 
+const finalResult = countLetters("l o l");
 assertEqual(finalResult["l"],2);
 assertEqual(finalResult["o"],1);
