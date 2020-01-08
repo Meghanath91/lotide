@@ -9,10 +9,9 @@ const assertEqual = function(actual, expected) {
 
 // allItems: an array of strings that we need to look through
 // itemsToCount: an object specifying what to count
+
 const countOnly = function(allItems, itemsToCount) {
-  // let countItems=Object.keys(itemsToCount)
   let count = {};
-  //console.log(countItems);
   for (let item of allItems) {
     if (itemsToCount[item]) {
       if (count[item]) {
@@ -20,14 +19,10 @@ const countOnly = function(allItems, itemsToCount) {
       } else {
         count[item] = 1;
       }
-        
-      // console.log('item: ', item)
     }
-      
   }
   return (count);
 };
-
 
 const firstNames = [
   "Karl",
