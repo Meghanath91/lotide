@@ -11,27 +11,26 @@ const eqArrays = function(actual, expected) {
   }
 };
 const assertArrayEqual = function(actual, expected) {
-  if (eqArrays(actual,expected)===true) {
+  if (eqArrays(actual,expected) === true) {
     console.log(`✅Assertion Passed:  ${actual}   ===  ${expected}`);
-  } else if (eqArrays(actual,expected)=== false){
+  } else if (eqArrays(actual,expected) === false) {
     console.log(`🛑Assertion Failed: ${actual} !==  ${expected}`);
    
   }
-}
+};
 
 const letterPositions = function(sentence) {
   let result = {};
-  for (let i = 0;i<sentence.length;i++) {
-    if(sentence[i]!==" "){
-      if(result[sentence[i]]){
+  for (let i = 0; i < sentence.length; i++) {
+    if (sentence[i] !== " ") {
+      if (result[sentence[i]]) {
+        result[sentence[i]].push(i);
+      } else {
+        result[sentence[i]] = [];
         result[sentence[i]].push(i);
       }
-        else{
-          result[sentence[i]]=[];
-          result[sentence[i]].push(i);
-        }
 
-      }
+    }
   }
   
   console.log(result);
@@ -41,4 +40,4 @@ const result1 = letterPositions("hello");
 assertArrayEqual(result1["h"],[ 0 ]);
 assertArrayEqual(result1["e"],[ 1]);
 assertArrayEqual(result1["l"],[ 2, 3 ]);
-assertArrayEqual(result1["o"],[ 4])
+assertArrayEqual(result1["o"],[ 4]);
