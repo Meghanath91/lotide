@@ -10,6 +10,7 @@ const eqArrays = function(actual, expected) {
     return true;
   }
 };
+
 const assertArrayEqual = function(actual, expected) {
   if (eqArrays(actual,expected) === true) {
     console.log(`✅Assertion Passed:  ${actual}   ===  ${expected}`);
@@ -29,13 +30,11 @@ const letterPositions = function(sentence) {
         result[sentence[i]] = [];
         result[sentence[i]].push(i);
       }
-
     }
   }
-  
-  console.log(result);
   return result;
 };
+
 const result1 = letterPositions("hello");
 assertArrayEqual(result1["h"],[ 0 ]);
 assertArrayEqual(result1["e"],[ 1]);
