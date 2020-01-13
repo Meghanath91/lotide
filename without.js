@@ -17,7 +17,20 @@ const assertArrayEqual = function(actual, expected) {
     console.log(`🛑Assertion Failed: ${actual} !==  ${expected}`);
    
   }
-}
+};
+
 const without = function(array,itemToRemove) {
+  let newArray= array;
   
+  for(element of itemToRemove) {
+    for (index in array) {
+      if (array[index] === element) {
+        newArray.splice(index, 1);
+      }
+    }
+  
+  }
+  return newArray;
 }
+ 
+assertArrayEqual(without([1,2,3,4],[2,3]),[1,4]);
